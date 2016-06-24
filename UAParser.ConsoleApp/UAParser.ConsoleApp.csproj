@@ -49,12 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UAParser\UAParser.csproj">
-      <Project>{83c63bea-1859-4dd5-ae08-9a0fec269b17}</Project>
-      <Name>UAParser</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

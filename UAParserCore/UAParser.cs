@@ -17,6 +17,8 @@
 //
 #endregion
 
+using System.Reflection;
+
 
 namespace UAParser
 {
@@ -298,7 +300,7 @@ namespace UAParser
         /// <returns></returns>
         public static Parser GetDefault()
         {
-            using (var stream = typeof(Parser).Assembly.GetManifestResourceStream("UAParser.regexes.yaml"))
+            using (var stream = typeof(Parser).GetTypeInfo().Assembly.GetManifestResourceStream("UAParser.regexes.yaml"))
             // ReSharper disable once AssignNullToNotNullAttribute
             using (var reader = new StreamReader(stream))
                 return new Parser(new MinimalYamlParser(reader.ReadToEnd()));
